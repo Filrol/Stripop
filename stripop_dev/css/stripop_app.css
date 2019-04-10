@@ -1,0 +1,301 @@
+/* GENERAL */
+/* GLOBAL MIXIN */
+/* (others specifics mixins in '_turbomedia.css')
+
+
+//*** MEDIA QUERIES ***/
+/* Bloc avec un ratio width/hauteur */
+/*@mixin aspect-ratio($w, $h) {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: ($h / $w)*100vw;
+    margin: auto 0;
+    $apect-ratio: "min-aspect-ratio:"+$w+"/"+$h;
+    @media screen and ($apect-ratio) {
+        height:100vh;
+        width: ($w/$h)*100vh;
+        margin:0 auto;
+    }
+}*/
+/* FONTS */
+/* BREAKPOINTS  */
+/*Desktop hd*/
+/*Desktop medium*/
+/*Desktop sd*/
+/*Iphone 6, 6+*/
+/*Iphone 2G, 3G, 4, 4S, 5, 5S*/
+/* Ajouter vos variables ci-dessous (couleurs, seconde police...) */
+html {
+  font-size: 1vw;
+  text-size-adjust: none;
+  position: relative;
+  height: 100%; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  color: inherit; }
+
+a:hover {
+  text-decoration: none; }
+
+a:hover, a:active, a:focus {
+  outline: 0; }
+
+p, li {
+  line-height: 1.3; }
+
+ul, li {
+  list-style-image: none;
+  list-style-type: none;
+  list-style-position: inside; }
+
+img {
+  display: block;
+  width: 100%;
+  max-height: auto;
+  height: 100%;
+  max-width: auto; }
+
+body {
+  position: relative;
+  background: #000;
+  font-family: "Ralway", Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  font: unset;
+  background-color: transparent; }
+
+.hidden {
+  opacity: 0;
+  visibility: hidden; }
+
+#monitor {
+  display: none;
+  /* uncomment 'debug' in main.scss to show */ }
+
+.swiper-container {
+  display: flex;
+  align-items: center;
+  max-height: 600px; }
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  margin: auto 0; }
+
+.swiper-wrapper {
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  align-items: center; }
+
+.swiper-slide {
+  text-align: center;
+  max-height: 600px;
+  height: 96%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  z-index: 10; }
+
+.case,
+.swiper-slide {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 100; }
+
+.section {
+  height: 100%;
+  max-height: 600px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex: 1 0 auto; }
+
+.swiper-pagination-progressbar {
+  position: fixed;
+  z-index: 100; }
+
+/*  VARIABLE  */
+/*  change with the image width in 'img/hd/'   */
+.turbomedia .swiper-slide {
+  display: flex; }
+  .turbomedia .swiper-slide .case {
+    position: relative;
+    max-height: 600px;
+    max-width: 849px;
+    overflow: hidden; }
+    .turbomedia .swiper-slide .case:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: 70.58824%; }
+    .turbomedia .swiper-slide .case > .case {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+  .turbomedia .swiper-slide.swiper-slide-active .case {
+    box-shadow: -2px 2px 3px 0.2vw rgba(0, 0, 0, 0.2); }
+
+@media screen and (min-height: 638px) {
+  .swiper-container {
+    padding: 3vh 0;
+    height: 97vh; } }
+
+.section {
+  overflow: visible; }
+
+/* SKIN */
+/** Fonts faces **/
+@font-face {
+  font-family: 'Raleway';
+  src: font-url("../fonts/raleway/raleway-regular.eot");
+  src: font-url("../fonts/raleway/raleway-regular.eot?#iefix") format("embedded-opentype"), font-url("../fonts/raleway/raleway-regular.woff2") format("woff2"), font-url("../fonts/raleway/raleway-regular.woff") format("woff"), font-url("../fonts/raleway/raleway-regular.ttf") format("truetype"), font-url("../fonts/raleway/raleway-regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: font-url("../fonts/raleway/raleway-semibold.eot");
+  src: font-url("../fonts/raleway/raleway-semibold.eot?#iefix") format("embedded-opentype"), font-url("../fonts/raleway/raleway-semibold.woff2") format("woff2"), font-url("../fonts/raleway/raleway-semibold.woff") format("woff"), font-url("../fonts/raleway/raleway-semibold.ttf") format("truetype"), font-url("../fonts/raleway/raleway-semibold.svg") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Raleway';
+  src: font-url("../fonts/raleway/raleway-bold.eot");
+  src: font-url("../fonts/raleway/raleway-bold.eot?#iefix") format("embedded-opentype"), font-url("../fonts/raleway/raleway-bold.woff2") format("woff2"), font-url("../fonts/raleway/raleway-bold.woff") format("woff"), font-url("../fonts/raleway/raleway-bold.ttf") format("truetype"), font-url("../fonts/raleway/raleway-bold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+/* turn your phone */
+#turn-your-phone {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 2rem;
+  background: white; }
+  #turn-your-phone p {
+    display: block;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2em; }
+
+@media only screen and (orientation: portrait) {
+  #turn-your-phone {
+    display: flex !important;
+    z-index: 998; } }
+
+.device-rotate {
+  display: block;
+  height: 38.68195vw;
+  width: 50vw;
+  background: url(../img/interface/warning-rotate.png) center center/contain no-repeat;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* STORY */
+/* strip A */
+.A01 .case {
+  background-image: url(../img/hd/A-01.jpg); }
+
+.A02 .case {
+  background-image: url(../img/hd/A-02.jpg); }
+
+.A03 .case {
+  background-image: url(../img/hd/A-03.jpg); }
+
+.A04 .case {
+  background-image: url(../img/hd/A-04.jpg); }
+
+.A05 .case {
+  background-image: url(../img/hd/A-05.jpg); }
+
+.A06 .case {
+  background-image: url(../img/hd/A-06.jpg); }
+
+.A07 .case {
+  background-image: url(../img/hd/A-07.jpg); }
+
+/* TEMPORARY */
+/* DEBBUG */
+body {
+  background: grey; }
+
+.swiper-wrapper {
+  background: green; }
+
+.section {
+  background: blue; }
+
+.swiper-slide {
+  background: yellow; }
+
+.case {
+  background-color: green; }
+
+#monitor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  /* comment 'debug' in main.scss to hide */
+  flex-direction: column;
+  background-color: #0d0c27;
+  z-index: 999; }
+  #monitor input {
+    border: #FFFFFF none 0px;
+    font-size: 2rem; }
+  #monitor #sectionID {
+    background-color: blue;
+    padding: 9px;
+    text-align: center;
+    color: #fff; }
+  #monitor #caseID {
+    background-color: yellow;
+    padding: 9px;
+    text-align: center; }
+
+.swiper-slide-active {
+  border-top: 2px yellow solid; }

@@ -1,0 +1,21 @@
+{
+  "name": "Stripop",
+  "version": "1.0.0",
+  "description": "Stripop builder",
+  "author": "Stripop Studio",
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "del": "^4.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-plumber": "latest",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "latest",
+    "gulp-sequence": "latest",
+    "gulp-uglify": "latest",
+    "postcss-discard-comments": "latest",
+    "run-sequence": "^2.2.1"
+  }
+}

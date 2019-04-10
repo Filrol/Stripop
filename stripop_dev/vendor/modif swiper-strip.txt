@@ -1,0 +1,5 @@
+resize => swiper.update
+
+
+puis minifié dans swiper-stripop.min.js de ce dossier
+à tester

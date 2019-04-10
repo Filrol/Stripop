@@ -1,0 +1,47 @@
+/* DEBBUG */
+
+body {
+  background: grey;
+}
+.swiper-wrapper {
+  background: green;
+}
+.section {
+  background: blue;
+}
+.swiper-slide {
+  background: yellow;
+}
+
+.case {
+  background-color: green;
+}
+
+#monitor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex; /* comment 'debug' in main.scss to hide */
+  flex-direction: column;
+  background-color: #0d0c27;
+  z-index: 999;
+  input {
+    border:#FFFFFF none 0px;
+    font-size: 2rem;
+  }
+  #sectionID {
+    background-color: blue;
+    padding: 9px;
+    text-align:center;
+    color: #fff;
+  }
+  #caseID {
+    background-color: yellow;
+    padding: 9px;
+    text-align:center;
+  }
+}
+
+.swiper-slide-active {
+  border-top: 2px yellow solid;
+}

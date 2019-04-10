@@ -1,0 +1,28 @@
+/*  VARIABLE  */
+/*  change with the image width in 'img/hd/'   */
+$imageWidth:  849px;
+
+.turbomedia {
+  .swiper-slide {
+    display: flex;
+    .case {
+      @include aspect-ratio(85,60);
+      max-height: 600px;
+      max-width: $imageWidth;
+      overflow: hidden;
+    }
+    &.swiper-slide-active .case {
+     box-shadow: -2px 2px 3px 0.2vw rgba(0,0,0,0.2);
+   }
+ }
+}
+
+@media screen and (min-height: 638px) {
+  .swiper-container {
+    padding: 3vh 0;
+    height: 97vh;
+  }
+}
+.section {
+  overflow: visible;
+}

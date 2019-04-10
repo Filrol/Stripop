@@ -1,0 +1,73 @@
+/* GLOBAL MIXIN */
+/* (others specifics mixins in '_turbomedia.css')
+
+
+//*** MEDIA QUERIES ***/
+@function translate-media-condition($point) {
+    $condMap: (
+        "screen": "only screen",
+        "print": "only print",
+        "landscape": "(orientation:landscape)",
+        "portrait": "(orientation:portrait)",
+        "sd": "(max-width: #{$width_phone_hd})",
+        "hd": "(min-width: #{($width_phone_hd + 1)})",
+        "phone-sd": "(max-width: #{$width_phone_sd})",
+        "phone-hd": "(min-width: #{($width_phone_sd + 1)}) and (max-width: #{$width_phone_hd})",
+        "phone-all": "(max-width: #{$width_phone_hd})",
+        "phone-upper": "(min-width: #{($width_phone_hd + 1)})",
+        "tablet": "(min-width: #{($width_phone_hd + 1)}) and (max-width: #{($width_desktop_sd - 1)})",
+        "phone-tablet": "(max-width: #{($width_desktop_sd - 1)})",
+        "desktop-all": "(min-width: #{$width_desktop_sd})",
+        "desktop-sd": "(min-width: #{$width_desktop_sd}) and (max-width: #{($width_desktop - 1)})",
+        "desktop": "(min-width: #{$width_desktop}) and (max-width: #{($width_desktop_hd - 1)})",
+        "desktop-hd": "(min-width: #{$width_desktop_hd}))",
+        "wide": "(min-width: #{$width_desktop}) and (max-width: #{($width_desktop_hd - 1)}) and (max-aspect-ratio: 18/10)",
+        "wide-hd": "(min-width: #{$width_desktop_hd})",
+        "r43": "(max-aspect-ratio: 16/10)",
+        "r169": "(min-aspect-ratio: 16/10) and (max-aspect-ratio: 18/10)",
+        "r2": "(min-aspect-ratio: 18/10)",
+        "not-r2": "(max-aspect-ratio: 18/10)",
+        "scene": "(min-aspect-ratio: #{$scene_width}/#{$scene_height})"
+    );
+    @return map-get($condMap, $point);
+}
+//** Responsives breakpoint **/
+@mixin responsive($args) {
+    //@debug $args;
+    $query: "only screen";
+    @each $arg in $args {
+        $query: $query + " and " + translate-media-condition($arg);
+    }
+    @media #{$query}  { @content; }
+}
+
+/* Bloc avec un ratio width/hauteur */
+/*@mixin aspect-ratio($w, $h) {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: ($h / $w)*100vw;
+    margin: auto 0;
+    $apect-ratio: "min-aspect-ratio:"+$w+"/"+$h;
+    @media screen and ($apect-ratio) {
+        height:100vh;
+        width: ($w/$h)*100vh;
+        margin:0 auto;
+    }
+}*/
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .case {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>STRIPOP Struture</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="vendor/swiper.min.css">
+  <link rel="stylesheet" href="css/stripop_app.css">
+
+
+</head>
+<body id="stripop">
+  <div id="turn-your-phone">
+    <p>Veuillez tourner votre appareil<br>pour lire cette histoire interactive</p>
+    <figure class="device-rotate"></figure>
+  </div>
+
+
+
+  <!-- ECRAN A -->
+  <!-- add ".turbomedia" / ".stripop" for css adaptation + strip-A -->
+  <div class="swiper-container strip-A stripop">
+
+    <div class="swiper-wrapper">
+
+      <div class="section s1" data-masection="1">
+        <div class="swiper-slide A01" data-ratio="1.333" data-hash="step1"><div class="case"></div></div>
+        <div class="swiper-slide A02" data-ratio="1.333" data-hash="step2"><div class="case"></div></div>
+        <div class="swiper-slide A03" data-ratio="1.333" data-hash="step3"><div class="case"></div></div>
+      </div>
+
+      <div class="section s2" data-masection="2">
+        <div class="swiper-slide A04" data-ratio="0.833" data-hash="step4"><div class="case"></div></div>
+        <div class="swiper-slide A05" data-ratio="0.417" data-hash="step5"><div class="case"></div></div>
+        <div class="swiper-slide A06" data-ratio="1.667" data-hash="step6"><div class="case"></div></div>
+        <div class="swiper-slide A07" data-ratio="1.083" data-hash="step7"><div class="case"></div></div>
+      </div>
+
+    </div>
+
+    <!-- If we need pagination -->
+    <div class="swiper-pagination "></div>
+
+
+
+  </div>
+
+    <!-- If we need navigation buttons -->
+    <button class="swiper-button-prev"></button>
+    <button class="swiper-button-next" tabindex="2"></button>
+
+
+
+
+
+<!-- monitor -->
+<div id="monitor">
+  <input type="sectionID" id="sectionID" value="- -" readonly>
+  <input type="caseID" id="caseID" value="- -" readonly>
+</div>
+
+
+
+
+<!-- Swiper JS -->
+
+<script src="vendor/jquery-3.3.1.min.js"></script>
+<script src="vendor/howler.js"></script>
+<!-- <script src="vendor/swiper-stripop.min.js"></script> -->
+<script src="vendor/swiper-stripop.js"></script>
+<script src="js/stripop_app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+html {
+  font-size:1vw;
+  text-size-adjust: none;
+  position: relative;
+  height: 100%;
+}
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+a { color:inherit;}
+a:hover { text-decoration:none; }
+a:hover, a:active, a:focus { outline:0; }
+p, li { line-height: 1.3; }
+ul, li {
+  list-style-image:none;
+  list-style-type: none;
+  list-style-position: inside;
+}
+img {
+  display:block;
+  width:100%;
+  max-height:auto;
+  height: 100%;
+  max-width: auto;
+}
+body {
+  position: relative;
+  background: #000;
+  font-family: $main-font;
+  font-size: 1rem;
+  color:#000;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  font: unset;
+  background-color: transparent;
+}
+.hidden {
+  opacity: 0;
+  visibility:hidden;
+}
+#monitor {
+  display: none; /* uncomment 'debug' in main.scss to show */
+}
+.swiper-container {
+  display: flex;
+  align-items: center;
+  max-height: 600px;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  margin: auto 0;
+}
+.swiper-wrapper {
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+}
+.swiper-slide {
+  text-align: center;
+  max-height: 600px;
+  height:96%;
+  position: relative ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+  margin-top: 10%;
+  z-index: 10;
+}
+.case,
+.swiper-slide {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 100;
+}
+.section {
+  height: 100%;
+  max-height: 600px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex: 1 0 auto;
+}
+.swiper-pagination-progressbar {
+    position: fixed;
+    z-index: 100;
+}
