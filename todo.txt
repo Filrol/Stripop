@@ -1,7 +1,0 @@
-breakpoint responsive
-
-strucutre des scss
-
-Utiliser COMPASS pour le ratio crer une mixin qui emploi 
-image-width($image)
-et qui calcule le ratio automatiquement
